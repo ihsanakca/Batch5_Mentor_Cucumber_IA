@@ -11,14 +11,13 @@ Feature: Login Functionality
     When The user enters Melih's credentials
     Then The user should be able to login
 
-  @Rosa @Login
-  Scenario: Login as Rose
+  Scenario: Login as mike
     Given The user is on the login page
-    When The user enters Rosa's credentials
+    When The user enters credentials as "mike@gmail.com" and "mike1234"
+    Then The user should be able to login
+  @wip
+  Scenario: Login as Rosa
+    Given The user is on the login page
+    When The user enters credentials as "rosa@test.com" and "Test123456"
     Then The user should be able to login
 
-  @Mike @Login
-  Scenario: Login as Mike
-    Given The user is on the login page
-    When The user enters Mike's credentials
-    Then The user should be able to login
