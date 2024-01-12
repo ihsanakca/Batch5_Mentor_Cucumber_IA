@@ -19,7 +19,7 @@ Feature: Add Education Tests
       | To Date                 |
       | Program Description     |
 
-  @wip
+
   Scenario: Check Add Education Form Labels_2
     When The user navigates to tab "Melih Gezer" and module "My Profile"
     Then The user verifies that the page "User Profile" displayed
