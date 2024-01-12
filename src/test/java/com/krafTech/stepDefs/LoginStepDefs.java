@@ -2,8 +2,10 @@ package com.krafTech.stepDefs;
 
 import com.krafTech.pages.DashboardPage;
 import com.krafTech.pages.LoginPage;
+import com.krafTech.utilities.BrowserUtils;
 import com.krafTech.utilities.ConfigurationReader;
 import com.krafTech.utilities.Driver;
+import com.krafTech.utilities.ExcelUtil;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -51,6 +53,12 @@ public class LoginStepDefs {
     public void theUserLoginsAndVerifiesWithFollowingCredentialsList(List<String > credentials) {
         loginPage.login(credentials.get(0),credentials.get(1));
         dashboardPage.verifyUserName(credentials.get(2));
+    }
+
+    @When("The user logins with {string} and {string} using excel file: {string}, {string} and {int}")
+    public void the_user_logins_with_and_using_excel_file_and(String email, String password, String path, String sheetName, int row) {
+        List<Map<String, String>> excelData = BrowserUtils.getExcelData(path, sheetName);
+        loginPage.login(excelData.get(row).get(email),excelData.get(row).get(password));
     }
 
 }

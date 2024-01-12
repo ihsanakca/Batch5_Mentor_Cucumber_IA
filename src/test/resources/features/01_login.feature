@@ -67,7 +67,7 @@ Feature: Login Functionality
       | Mg12345678       |
       | Melih Gezer      |
 
-  @wip
+
   Scenario Outline: Login with List with DDF
     Given The user is on the login page
     When The user logins and verifies with following credentials list
