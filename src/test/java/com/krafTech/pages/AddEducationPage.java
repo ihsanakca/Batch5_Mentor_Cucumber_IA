@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class AddEducationPage extends BasePage{
 
     @FindBy(xpath = "//button[text()='Add Education'][./parent::div]")
@@ -14,6 +16,12 @@ public class AddEducationPage extends BasePage{
 
     @FindBy(css = "input#school")
     public WebElement schoolBar;
+
+    @FindBy(xpath = "//div[@id='education-add']//label[not(@for='current')]")
+    public List<WebElement> formLabels;
+
+    @FindBy(xpath = "//div[@id='education-add']//label")
+    public List<WebElement> formLabelsWithEmptyLabel;
 
     public void fillingAddEducationForm(String schoolName,String degree,
             String study,String fromDate,String toDate, String description){

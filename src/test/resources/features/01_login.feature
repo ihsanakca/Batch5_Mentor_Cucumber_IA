@@ -5,17 +5,19 @@ Feature: Login Functionality
 #  test case = scenario
 #  test step = Given, When, Then etc.
 
-  @Melih @Login @Smoke
+  @Melih
   Scenario: Login as Melih Gezer
     Given The user is on the login page
     When The user enters Melih's credentials
     Then The user should be able to login
-
+    And The user should be able to verify success login with "Melih Gezer"
+  @Login
   Scenario: Login as mike
     Given The user is on the login page
     When The user enters credentials as "mike@gmail.com" and "mike1234"
     Then The user should be able to login
-  @wip
+
+  @Smoke
   Scenario: Login as Rosa
     Given The user is on the login page
     When The user enters credentials as "rosa@test.com" and "Test123456"
