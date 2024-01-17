@@ -25,7 +25,6 @@ public class UserProfileStepDefs {
     @Then("The user verifies that last added school with {string} using excel file: {string}, {string} and {int}")
     public void the_user_verifies_that_last_added_school_with_using_excel_file_and(String schoolName, String path, String sheetName, Integer row) {
         List<Map<String, String>> excelData = BrowserUtils.getExcelData(path, sheetName);
-        BrowserUtils.waitFor(2);
         String expectedSchool = excelData.get(row).get(schoolName);
         String actualSchool = userProfilePage.addedLastEducationRecordName(expectedSchool);
         Assert.assertEquals(expectedSchool,actualSchool);
