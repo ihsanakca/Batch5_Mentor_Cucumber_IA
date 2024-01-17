@@ -8,13 +8,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
               "json:target/cucumber.json",
-                "html:target/default-html-reports.html",
-                "pretty"
+                "html:target/default-html-reports.html"//"pretty"
         },
         features = "src/test/resources/features",
         glue = "com/krafTech/stepDefs",
         dryRun = false,
-        tags = "@wip"
+        tags = "@zip"
 
 )
 public class CukesRunner {

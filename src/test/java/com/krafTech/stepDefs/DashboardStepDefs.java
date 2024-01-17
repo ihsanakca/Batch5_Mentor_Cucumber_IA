@@ -30,4 +30,12 @@ public class DashboardStepDefs {
         List<Map<String, String>> excelData = BrowserUtils.getExcelData(path, sheetName);
         dashboardPage.verifyUserName(excelData.get(row).get(userName));
     }
+
+    @When("The user navigates to tab {string} and module {string} using excel file: {string}, {string} and {int}")
+    public void the_user_navigates_to_tab_and_module_using_excel_file_and(String userName, String module, String path, String sheetName, Integer row) {
+        List<Map<String, String>> excelData = BrowserUtils.getExcelData(path, sheetName);
+      dashboardPage.navigateTabAndModule(excelData.get(row).get(userName),module);
+    }
+
+
 }
