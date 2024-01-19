@@ -1,13 +1,17 @@
+@Regression
 Feature: Add Education Tests
 
-  Background:
-    Given The user is on the login page
-    When The user enters credentials as "mgezer@gmail.com" and "Mg12345678"
-    And The user should be able to verify success login with "Melih Gezer"
+#  Background:
+#    Given The user is on the login page
+#    When The user enters credentials as "mgezer@gmail.com" and "Mg12345678"
+#    And The user should be able to verify success login with "Melih Gezer"
 
 @rerun
   Scenario: Check Add Education Form Labels
-    When The user navigates to tab "Melih Gezer" and module "My Profile"
+  Given The user is on the login page
+  When The user enters credentials as "mgezer@gmail.com" and "Mg12345678"
+  And The user should be able to verify success login with "Melih Gezer"
+  When The user navigates to tab "Melih Gezer" and module "My Profile"
     Then The user verifies that the page "User Profile" displayed
     When The user navigates User Profile tabs with "Add Education"
     Then The user verifies that add education form is displayed
@@ -21,7 +25,10 @@ Feature: Add Education Tests
 
 @rerun @check
   Scenario: Check Add Education Form Labels_2
-    When The user navigates to tab "Melih Gezer" and module "My Profile"
+  Given The user is on the login page
+  When The user enters credentials as "mgezer@gmail.com" and "Mg12345678"
+  And The user should be able to verify success login with "Melih Gezer"
+  When The user navigates to tab "Melih Gezer" and module "My Profile"
     Then The user verifies that the page "User Profile" displayed
     When The user navigates User Profile tabs with "Add Education"
     Then The user verifies that add education form is displayed
@@ -31,7 +38,7 @@ Feature: Add Education Tests
       | Study                   |
       | From Date               |
       |                         |
-      | To Date  61               |
+      | To Date                 |
       | Program Description     |
 
   @zip

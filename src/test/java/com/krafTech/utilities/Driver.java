@@ -1,7 +1,5 @@
 package com.krafTech.utilities;
 
-//import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -36,7 +34,7 @@ public class Driver {
                     break;
                 case "chrome-headless":
 
-              //      driverPool.set(new ChromeDriver(new ChromeOptions().setH("--true")));
+                   driverPool.set(new ChromeDriver(new ChromeOptions().addArguments("--headless")));
                     break;
                 case "firefox":
 
@@ -44,7 +42,7 @@ public class Driver {
                     break;
                 case "firefox-headless":
 
-               //     driverPool.set(new FirefoxDriver(new FirefoxOptions().("--true)));
+                   driverPool.set(new FirefoxDriver(new FirefoxOptions().addArguments("--headless")));
                     break;
                 case "edge":
                     if (!System.getProperty("os.name").toLowerCase().contains("windows"))
@@ -77,7 +75,7 @@ public class Driver {
                     break;
             }
 
-        }driverPool.get().manage().window().setPosition(new Point(3500,0));
+        }
         return driverPool.get();
     }
 

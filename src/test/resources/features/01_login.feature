@@ -43,7 +43,7 @@ Feature: Login Functionality
       | email            | password   | userName    |
       | mike@gmail.com   | mike1234   | mike        |
       | rosa@test.com    | Test123456 | Rosa        |
-      | mgezer@gmail.com | Mg12345678 | Melih Gezer61 |
+      | mgezer@gmail.com | Mg12345678 | Melih Gezer |
 
 
   Scenario Outline: Login with map with DDF
@@ -65,7 +65,7 @@ Feature: Login Functionality
     When The user logins and verifies with following credentials list
       | mgezer@gmail.com |
       | Mg12345678       |
-      | Melih Gezer61      |
+      | Melih Gezer      |
 
 
   Scenario Outline: Login with List with DDF
