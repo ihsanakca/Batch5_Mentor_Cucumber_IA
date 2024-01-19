@@ -59,7 +59,7 @@ Feature: Login Functionality
       | rosa@test.com    | Test123456 | Rosa        |
       | mgezer@gmail.com | Mg12345678 | Melih Gezer |
 
-
+  @c_List
   Scenario: Login with List
     Given The user is on the login page
     When The user logins and verifies with following credentials list
