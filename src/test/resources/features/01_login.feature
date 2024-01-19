@@ -25,7 +25,7 @@ Feature: Login Functionality
     Then The user should be able to login
 
 
-
+@map
   Scenario: Login with map
     Given The user is on the login page
     When The user logins with following credentials
@@ -34,7 +34,7 @@ Feature: Login Functionality
     Then The user should be able to verify success login with following user name
       | userName | Rosa |
 
-
+@rerun
   Scenario Outline:  Login test DDF
     Given The user is on the login page
     When The user enters credentials as "<email>" and "<password>"
@@ -43,7 +43,7 @@ Feature: Login Functionality
       | email            | password   | userName    |
       | mike@gmail.com   | mike1234   | mike        |
       | rosa@test.com    | Test123456 | Rosa        |
-      | mgezer@gmail.com | Mg12345678 | Melih Gezer |
+      | mgezer@gmail.com | Mg12345678 | Melih Gezer61 |
 
 
   Scenario Outline: Login with map with DDF
@@ -59,13 +59,13 @@ Feature: Login Functionality
       | rosa@test.com    | Test123456 | Rosa        |
       | mgezer@gmail.com | Mg12345678 | Melih Gezer |
 
-  @c_List
+  @c_List @rerun
   Scenario: Login with List
     Given The user is on the login page
     When The user logins and verifies with following credentials list
       | mgezer@gmail.com |
       | Mg12345678       |
-      | Melih Gezer      |
+      | Melih Gezer61      |
 
 
   Scenario Outline: Login with List with DDF
