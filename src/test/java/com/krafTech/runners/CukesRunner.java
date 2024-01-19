@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/krafTech/stepDefs",
         dryRun = false,
-        tags = "@Regression"
+        tags = "@rerun"
 
 )
 public class CukesRunner {
