@@ -20,7 +20,6 @@ public class Driver {
 
             switch (browser.toLowerCase()){
                 case "chrome" :
-
                     driver=new ChromeDriver();
                     break;
                 case "chrome-headless" :
